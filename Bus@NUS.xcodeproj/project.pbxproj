@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		980167811B43A1110016721A /* NextBusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980167801B43A1110016721A /* NextBusTableViewCell.swift */; };
+		980167831B43A1350016721A /* BusStopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980167821B43A1350016721A /* BusStopDetailViewController.swift */; };
+		980167871B43A46D0016721A /* BusApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980167861B43A46D0016721A /* BusApiHelper.swift */; };
+		980167891B43A4C00016721A /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980167881B43A4C00016721A /* BusStop.swift */; };
+		9801678B1B43A4CA0016721A /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801678A1B43A4CA0016721A /* Bus.swift */; };
 		98A90C951B3C4377004FB118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A90C941B3C4377004FB118 /* AppDelegate.swift */; };
 		98A90C9A1B3C4378004FB118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A90C981B3C4378004FB118 /* Main.storyboard */; };
 		98A90C9C1B3C4378004FB118 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98A90C9B1B3C4378004FB118 /* Images.xcassets */; };
@@ -31,6 +36,12 @@
 		5A40CC7FEA9C76EB2A85E1FB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF00B660AA34A6A6556520F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9276C509A58297E393349A5F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		980167801B43A1110016721A /* NextBusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextBusTableViewCell.swift; sourceTree = "<group>"; };
+		980167821B43A1350016721A /* BusStopDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopDetailViewController.swift; sourceTree = "<group>"; };
+		980167841B43A3FA0016721A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Pods/Alamofire.framework"; sourceTree = "<group>"; };
+		980167861B43A46D0016721A /* BusApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusApiHelper.swift; sourceTree = "<group>"; };
+		980167881B43A4C00016721A /* BusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
+		9801678A1B43A4CA0016721A /* Bus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		98A90C8F1B3C4377004FB118 /* Bus@NUS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bus@NUS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A90C931B3C4377004FB118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98A90C941B3C4377004FB118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +77,7 @@
 		0344D11AF6F145BB83693703 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				980167841B43A3FA0016721A /* Alamofire.framework */,
 				5A40CC7FEA9C76EB2A85E1FB /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -136,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				98A90CBC1B3C4469004FB118 /* BusExplorerViewController.swift */,
+				980167821B43A1350016721A /* BusStopDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +156,8 @@
 		98A90CB51B3C43D8004FB118 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				980167881B43A4C00016721A /* BusStop.swift */,
+				9801678A1B43A4CA0016721A /* Bus.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				98A90CBE1B3C44B3004FB118 /* BusStopTableViewCell.swift */,
+				980167801B43A1110016721A /* NextBusTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +174,7 @@
 		98A90CBB1B3C4417004FB118 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				980167861B43A46D0016721A /* BusApiHelper.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -323,7 +340,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				98A90CBD1B3C4469004FB118 /* BusExplorerViewController.swift in Sources */,
+				980167811B43A1110016721A /* NextBusTableViewCell.swift in Sources */,
+				980167831B43A1350016721A /* BusStopDetailViewController.swift in Sources */,
+				980167891B43A4C00016721A /* BusStop.swift in Sources */,
+				980167871B43A46D0016721A /* BusApiHelper.swift in Sources */,
 				98A90CBF1B3C44B3004FB118 /* BusStopTableViewCell.swift in Sources */,
+				9801678B1B43A4CA0016721A /* Bus.swift in Sources */,
 				98A90C951B3C4377004FB118 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +474,7 @@
 			baseConfigurationReference = 5AF00B660AA34A6A6556520F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Bus@NUS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -463,6 +486,10 @@
 			baseConfigurationReference = 9276C509A58297E393349A5F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods",
+				);
 				INFOPLIST_FILE = "Bus@NUS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

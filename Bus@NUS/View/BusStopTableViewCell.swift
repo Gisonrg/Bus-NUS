@@ -10,6 +10,6 @@ import UIKit
 
 class BusStopTableViewCell : UITableViewCell {
 
-    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var stopName: UILabel!
     
 }
