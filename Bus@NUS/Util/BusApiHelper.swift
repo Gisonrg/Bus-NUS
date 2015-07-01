@@ -18,7 +18,7 @@ class BusApiHelper: NSObject {
     
     static let sharedInstance = BusApiHelper()
     
-    private let baseUrl = "http://gisonrg.me/api/nextBus/";
+    private let baseUrl = "http://gisonrg.me/api/nextBus/"
     
     private var delegate:BusApiHelperDelegate?
     
