@@ -4,12 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="Akagi-SB.ttf">
-            <string>Akagi-SemiBold</string>
-            <string>Akagi-SemiBold</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
         <!--Root View Controller-->
         <scene sceneID="OOA-EQ-8T4">
@@ -35,7 +29,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="stopName" destination="SfR-Dj-2TO" id="eBy-De-3G8"/>
-                                    <segue destination="vGJ-Bz-Roh" kind="show" id="hr0-aF-aVN"/>
+                                    <segue destination="vGJ-Bz-Roh" kind="show" id="A6F-yL-jgQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -53,7 +47,7 @@
         <!--Bus Stop Detail View Controller-->
         <scene sceneID="P9q-Hq-hvj">
             <objects>
-                <tableViewController id="vGJ-Bz-Roh" customClass="BusStopDetailViewController" customModule="Bus_NUS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BusStopDetailVC" id="vGJ-Bz-Roh" customClass="BusStopDetailViewController" customModule="Bus_NUS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="22" sectionFooterHeight="22" id="gmC-jA-2Fx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +61,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A2" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isc-1n-4iP">
                                             <rect key="frame" x="18" y="18" width="164" height="30"/>
-                                            <fontDescription key="fontDescription" name="Akagi-SemiBold" family="Akagi" pointSize="25"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -81,7 +75,7 @@
                                                         <constraint firstAttribute="height" constant="50" id="E6N-HW-1cG"/>
                                                         <constraint firstAttribute="width" constant="65" id="qbh-iQ-JP7"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Akagi-SemiBold" family="Akagi" pointSize="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">

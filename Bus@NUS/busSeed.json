@@ -1,0 +1,228 @@
+{
+    "locations": [
+        {
+            "buses": ["D1 (To BIZ)", "A1", "B (To COM2)", "BTC1"],
+            "latitude": 1.2935,
+            "name": "AS7",
+            "id": "AS7",
+            "longitude": 103.7717
+        },
+        {
+            "buses": ["A1", "BTC1", "A1E"],
+            "latitude": 1.29327065,
+            "name": "BIZ 2",
+            "id": "BIZ2",
+            "longitude": 103.77528179
+        },
+        {
+            "buses": ["BTC2"],
+            "latitude": 1.3198730329296,
+            "name": "BTC - Oei Tiong Ham Building",
+            "id": "BUKITTIMAH-BTC2",
+            "longitude": 103.817785565448
+        },
+        {
+            "buses": ["D1 (To BIZ)", "A1", "CLB-UT", "B (To COM2)", "BTC1", "A1E"],
+            "latitude": 1.29661556,
+            "name": "Central Library",
+            "id": "CENLIB",
+            "longitude": 103.77252342
+        },
+        {
+            "buses": ["A2", "D1 (To BIZ)", "A1", "B (To COM2)", "D1 (UTown)"],
+            "latitude": 1.29434373,
+            "name": "COM2 (CP13)",
+            "id": "COM2",
+            "longitude": 103.77370813
+        },
+        {
+            "buses": ["A2", "D1 (UTown)", "A2E", "B (Clementi)"],
+            "latitude": 1.29715571,
+            "name": "Computer Centre",
+            "id": "COMCEN",
+            "longitude": 103.77271211
+        },
+        {
+            "buses": ["A2", "B (Clementi)"],
+            "latitude": 1.29385148,
+            "name": "Eusoff Hall",
+            "id": "EUSOFF",
+            "longitude": 103.77044191
+        },
+        {
+            "buses": ["A2", "D1 (UTown)"],
+            "latitude": 1.29312892,
+            "name": "Opp HSSML",
+            "id": "HSSML-OPP",
+            "longitude": 103.77479454
+        },
+        {
+            "buses": ["B (To COM2)", "BTC1", "C (To FoS)"],
+            "latitude": 1.3008,
+            "name": "Clementi Road",
+            "id": "JAPSCHOOL",
+            "longitude": 103.7698
+        },
+        {
+            "buses": ["A1", "D2", "A1E"],
+            "latitude": 1.294762,
+            "name": "Kent Ridge MRT",
+            "id": "KR-MRT",
+            "longitude": 103.784294
+        },
+        {
+            "buses": ["A2", "D2", "A2E"],
+            "latitude": 1.295054,
+            "name": "Opp Kent Ridge MRT",
+            "id": "KR-MRT-OPP",
+            "longitude": 103.78466
+        },
+        {
+            "buses": ["D1 (To BIZ)", "A1", "B (To COM2)", "BTC1"],
+            "latitude": 1.29477503,
+            "name": "LT13",
+            "id": "LT13",
+            "longitude": 103.77061436
+        },
+        {
+            "buses": ["A2", "D1 (UTown)", "A2E", "B (Clementi)"],
+            "latitude": 1.29541598,
+            "name": "Ventus (Opp LT13)",
+            "id": "LT13-OPP",
+            "longitude": 103.77066248
+        },
+        {
+            "buses": ["A1", "D2", "C (Clementi)", "A1E"],
+            "latitude": 1.29745904,
+            "name": "LT29",
+            "id": "LT29",
+            "longitude": 103.78096715
+        },
+        {
+            "buses": ["A1"],
+            "latitude": 1.29631285,
+            "name": "NUH",
+            "id": "NUH",
+            "longitude": 103.78342673
+        },
+        {
+            "buses": ["A2"],
+            "latitude": 1.29767212,
+            "name": "Opp NUH",
+            "id": "NUH-OPP",
+            "longitude": 103.78316143
+        },
+        {
+            "buses": ["A2", "BTC2", "B (To COM2)", "BTC1", "C (To FoS)", "D2", "D1 (UTown)"],
+            "latitude": 1.30106227,
+            "name": "Museum",
+            "id": "MUSEUM",
+            "longitude": 103.77364746
+        },
+        {
+            "buses": ["A1"],
+            "latitude": 1.29310469,
+            "name": "PGP Hse No 7",
+            "id": "PGP7",
+            "longitude": 103.77788918
+        },
+        {
+            "buses": ["A2"],
+            "latitude": 1.29362639,
+            "name": "PGP Hse No 12",
+            "id": "PGP12",
+            "longitude": 103.77703196
+        },
+        {
+            "buses": ["A1"],
+            "latitude": 1.29367885,
+            "name": "Opp PGP Hse No 12",
+            "id": "PGP12-OPP",
+            "longitude": 103.77701582
+        },
+        {
+            "buses": ["A2"],
+            "latitude": 1.29313626,
+            "name": "PGP Hse No 14 & No 15",
+            "id": "PGP14-15",
+            "longitude": 103.77789507
+        },
+        {
+            "buses": ["A2", "A1", "BTC1", "D2"],
+            "latitude": 1.29188843,
+            "name": "PGPR",
+            "id": "PGP",
+            "longitude": 103.78037776
+        },
+        {
+            "buses": ["C (Clementi)", "B (Clementi)"],
+            "latitude": 1.30112574,
+            "name": "Raffles Hall",
+            "id": "RAFFLES",
+            "longitude": 103.77270731
+        },
+        {
+            "buses": ["A2", "C (To FoS)", "D2", "A2E", "FoS-UT"],
+            "latitude": 1.29750725,
+            "name": "S17",
+            "id": "S17",
+            "longitude": 103.78070309
+        },
+        {
+            "buses": ["A2", "C (To FoS)", "D2"],
+            "latitude": 1.29894779,
+            "name": "University Health Centre",
+            "id": "STAFFCLUB",
+            "longitude": 103.77603874
+        },
+        {
+            "buses": ["A1", "D2", "C (Clementi)"],
+            "latitude": 1.29874987,
+            "name": "Opp University Health Centre",
+            "id": "STAFFCLUB-OPP",
+            "longitude": 103.77565309
+        },
+        {
+            "buses": ["A2", "B (Clementi)"],
+            "latitude": 1.29305413,
+            "name": "Temasek Hall",
+            "id": "TEMASEK",
+            "longitude": 103.77180008
+        },
+        {
+            "buses": ["A1", "D2", "C (Clementi)"],
+            "latitude": 1.29710886,
+            "name": "UHall",
+            "id": "UHALL",
+            "longitude": 103.77873696
+        },
+        {
+            "buses": ["A2", "C (To FoS)", "D2"],
+            "latitude": 1.29727358,
+            "name": "Opp UHall",
+            "id": "UHALL-OPP",
+            "longitude": 103.77793184
+        },
+        {
+            "buses": ["UT-FoS", "D2", "D1 (UTown)", "UT-CLB"],
+            "latitude": 1.30361434,
+            "name": "University Town",
+            "id": "UTOWN",
+            "longitude": 103.77431692
+        },
+        {
+            "buses": ["D1 (To BIZ)", "A1", "B (To COM2)", "BTC1"],
+            "latitude": 1.29893975,
+            "name": "YIH",
+            "id": "YIH",
+            "longitude": 103.77432318
+        },
+        {
+            "buses": ["A2", "D1 (UTown)", "B (Clementi)"],
+            "latitude": 1.29887424,
+            "name": "Opp YIH",
+            "id": "YIH-OPP",
+            "longitude": 103.77417707
+        }
+    ]
+}

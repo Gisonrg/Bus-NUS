@@ -1,14 +1,14 @@
 //
-//  Bus.swift
+//  BusVo.swift
 //  Bus@NUS
 //
-//  Created by Jiang Sheng on 1/7/15.
+//  Created by Jiang Sheng on 2/7/15.
 //  Copyright (c) 2015 Echx. All rights reserved.
 //
 
 import UIKit
 
-class Bus: NSObject {
+class BusVo: NSObject {
     var name:String = ""
     var nextArrivalTime:String = ""
     
@@ -16,5 +16,10 @@ class Bus: NSObject {
         self.init()
         self.name = name
         self.nextArrivalTime = nextTime
+    }
+    
+    class func getBusVoFromBusDto(busDto:Bus) -> BusVo {
+        var newBus = BusVo(name: busDto.name, nextTime: "")
+        return newBus
     }
 }

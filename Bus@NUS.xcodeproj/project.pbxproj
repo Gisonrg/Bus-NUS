@@ -10,8 +10,6 @@
 		980167811B43A1110016721A /* NextBusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980167801B43A1110016721A /* NextBusTableViewCell.swift */; };
 		980167831B43A1350016721A /* BusStopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980167821B43A1350016721A /* BusStopDetailViewController.swift */; };
 		980167871B43A46D0016721A /* BusApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980167861B43A46D0016721A /* BusApiHelper.swift */; };
-		980167891B43A4C00016721A /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980167881B43A4C00016721A /* BusStop.swift */; };
-		9801678B1B43A4CA0016721A /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801678A1B43A4CA0016721A /* Bus.swift */; };
 		98A90C951B3C4377004FB118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A90C941B3C4377004FB118 /* AppDelegate.swift */; };
 		98A90C9A1B3C4378004FB118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A90C981B3C4378004FB118 /* Main.storyboard */; };
 		98A90C9C1B3C4378004FB118 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98A90C9B1B3C4378004FB118 /* Images.xcassets */; };
@@ -19,6 +17,11 @@
 		98A90CAB1B3C4378004FB118 /* Bus_NUSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A90CAA1B3C4378004FB118 /* Bus_NUSTests.swift */; };
 		98A90CBD1B3C4469004FB118 /* BusExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A90CBC1B3C4469004FB118 /* BusExplorerViewController.swift */; };
 		98A90CBF1B3C44B3004FB118 /* BusStopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A90CBE1B3C44B3004FB118 /* BusStopTableViewCell.swift */; };
+		98D89E431B4448150058EECB /* Bus@NUS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98D89E411B4448150058EECB /* Bus@NUS.xcdatamodeld */; };
+		98D89E451B444E870058EECB /* Bus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D89E441B444E870058EECB /* Bus.swift */; };
+		98D89E4B1B4462520058EECB /* BusStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D89E4A1B4462520058EECB /* BusStop.swift */; };
+		98D89E511B44E3970058EECB /* busSeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 98D89E501B44E3970058EECB /* busSeed.json */; };
+		98D89E551B4595050058EECB /* BusVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D89E541B4595050058EECB /* BusVo.swift */; };
 		E3346792CE3F44576655C9A6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A40CC7FEA9C76EB2A85E1FB /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -40,8 +43,6 @@
 		980167821B43A1350016721A /* BusStopDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopDetailViewController.swift; sourceTree = "<group>"; };
 		980167841B43A3FA0016721A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Pods/Alamofire.framework"; sourceTree = "<group>"; };
 		980167861B43A46D0016721A /* BusApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusApiHelper.swift; sourceTree = "<group>"; };
-		980167881B43A4C00016721A /* BusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStop.swift; sourceTree = "<group>"; };
-		9801678A1B43A4CA0016721A /* Bus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bus.swift; sourceTree = "<group>"; };
 		98A90C8F1B3C4377004FB118 /* Bus@NUS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bus@NUS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A90C931B3C4377004FB118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98A90C941B3C4377004FB118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +54,11 @@
 		98A90CAA1B3C4378004FB118 /* Bus_NUSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bus_NUSTests.swift; sourceTree = "<group>"; };
 		98A90CBC1B3C4469004FB118 /* BusExplorerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusExplorerViewController.swift; sourceTree = "<group>"; };
 		98A90CBE1B3C44B3004FB118 /* BusStopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopTableViewCell.swift; sourceTree = "<group>"; };
+		98D89E421B4448150058EECB /* Bus@NUS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Bus@NUS.xcdatamodel"; sourceTree = "<group>"; };
+		98D89E441B444E870058EECB /* Bus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bus.swift; path = coreData/Bus.swift; sourceTree = "<group>"; };
+		98D89E4A1B4462520058EECB /* BusStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusStop.swift; path = coreData/BusStop.swift; sourceTree = "<group>"; };
+		98D89E501B44E3970058EECB /* busSeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = busSeed.json; sourceTree = "<group>"; };
+		98D89E541B4595050058EECB /* BusVo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusVo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +124,9 @@
 		98A90C921B3C4377004FB118 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				98D89E501B44E3970058EECB /* busSeed.json */,
 				98A90C941B3C4377004FB118 /* AppDelegate.swift */,
+				98D89E411B4448150058EECB /* Bus@NUS.xcdatamodeld */,
 				98A90C981B3C4378004FB118 /* Main.storyboard */,
 				98A90C9B1B3C4378004FB118 /* Images.xcassets */,
 				98A90C9D1B3C4378004FB118 /* LaunchScreen.xib */,
@@ -156,8 +164,8 @@
 		98A90CB51B3C43D8004FB118 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				980167881B43A4C00016721A /* BusStop.swift */,
-				9801678A1B43A4CA0016721A /* Bus.swift */,
+				98D89E531B4594E00058EECB /* DTO */,
+				98D89E521B4594D10058EECB /* VO */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +185,23 @@
 				980167861B43A46D0016721A /* BusApiHelper.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		98D89E521B4594D10058EECB /* VO */ = {
+			isa = PBXGroup;
+			children = (
+				98D89E541B4595050058EECB /* BusVo.swift */,
+			);
+			name = VO;
+			sourceTree = "<group>";
+		};
+		98D89E531B4594E00058EECB /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				98D89E4A1B4462520058EECB /* BusStop.swift */,
+				98D89E441B444E870058EECB /* Bus.swift */,
+			);
+			name = DTO;
 			sourceTree = "<group>";
 		};
 		ABBB8B3B8C64C94894F9DCC9 /* Pods */ = {
@@ -274,6 +299,7 @@
 				98A90C9A1B3C4378004FB118 /* Main.storyboard in Resources */,
 				98A90C9F1B3C4378004FB118 /* LaunchScreen.xib in Resources */,
 				98A90C9C1B3C4378004FB118 /* Images.xcassets in Resources */,
+				98D89E511B44E3970058EECB /* busSeed.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,11 +368,13 @@
 				98A90CBD1B3C4469004FB118 /* BusExplorerViewController.swift in Sources */,
 				980167811B43A1110016721A /* NextBusTableViewCell.swift in Sources */,
 				980167831B43A1350016721A /* BusStopDetailViewController.swift in Sources */,
-				980167891B43A4C00016721A /* BusStop.swift in Sources */,
+				98D89E451B444E870058EECB /* Bus.swift in Sources */,
 				980167871B43A46D0016721A /* BusApiHelper.swift in Sources */,
 				98A90CBF1B3C44B3004FB118 /* BusStopTableViewCell.swift in Sources */,
-				9801678B1B43A4CA0016721A /* Bus.swift in Sources */,
+				98D89E4B1B4462520058EECB /* BusStop.swift in Sources */,
+				98D89E431B4448150058EECB /* Bus@NUS.xcdatamodeld in Sources */,
 				98A90C951B3C4377004FB118 /* AppDelegate.swift in Sources */,
+				98D89E551B4595050058EECB /* BusVo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +589,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		98D89E411B4448150058EECB /* Bus@NUS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				98D89E421B4448150058EECB /* Bus@NUS.xcdatamodel */,
+			);
+			currentVersion = 98D89E421B4448150058EECB /* Bus@NUS.xcdatamodel */;
+			path = "Bus@NUS.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 98A90C871B3C4377004FB118 /* Project object */;
 }

@@ -10,16 +10,15 @@ import UIKit
 
 class BusStopDetailViewController: UITableViewController, BusApiHelperDelegate {
     
-    var stopId:String = ""
-    var stopName:String = ""
-    
     var stop:BusStop?
-
+    var timeTable:Dictionary<String, String> = Dictionary<String, String>()
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        self.title = stopName
+        initTimeTable()
         BusApiHelper.setDelegate(self)
-        BusApiHelper.get(stopId, stopName: stopName)
+        BusApiHelper.get(stop!)
+        
+        super.viewDidLoad()
     }
 
     // MARK: - Table view data source
@@ -29,8 +28,8 @@ class BusStopDetailViewController: UITableViewController, BusApiHelperDelegate {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.stop != nil {
-            return stop!.busArray.count
+        if let currentStop = stop {
+            return currentStop.hasBus.count
         } else {
             return 0
         }
@@ -38,19 +37,35 @@ class BusStopDetailViewController: UITableViewController, BusApiHelperDelegate {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("NextBusTableViewCell", forIndexPath: indexPath) as! NextBusTableViewCell
-        
-        if self.stop != nil {
-            let bus = self.stop!.busArray[indexPath.row]
+
+        if let currentStop = stop {
+            let bus = currentStop.hasBus.objectAtIndex(indexPath.row) as! Bus
             cell.busName.text = bus.name
-            cell.arrivalTime.text = bus.nextArrivalTime
+            cell.arrivalTime.text = timeTable[bus.name]
         }
         
         return cell
     }
     
-    // MARK: - BusApiHelperDelegate
-    func getBusDataForStop(stop:BusStop) {
+    func setUpStop(stop:BusStop) {
         self.stop = stop
+        initTimeTable()
+        BusApiHelper.setDelegate(self)
+        BusApiHelper.get(stop)
         self.tableView.reloadData()
+    }
+    
+    // MARK: - BusApiHelperDelegate
+    func onReceiveBusData(buses:[BusVo]) {
+        for bus in buses {
+            timeTable[bus.name] = bus.nextArrivalTime
+        }
+        self.tableView.reloadData()
+    }
+    
+    private func initTimeTable() {
+        for bus in stop!.hasBus {
+            timeTable[bus.name] = "-"
+        }
     }
 }

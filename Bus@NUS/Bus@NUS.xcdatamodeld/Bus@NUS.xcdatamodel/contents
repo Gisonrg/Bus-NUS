@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Bus" representedClassName="Bus" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bus" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BusStop" inverseName="hasBus" inverseEntity="BusStop" syncable="YES"/>
+    </entity>
+    <entity name="BusStop" representedClassName="BusStop" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasBus" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Bus" inverseName="bus" inverseEntity="Bus" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BusStop" positionX="-261" positionY="47" width="128" height="118"/>
+        <element name="Bus" positionX="-18" positionY="45" width="128" height="73"/>
+    </elements>
+</model>
