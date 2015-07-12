@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dbJ-BJ-1Cc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dbJ-BJ-1Cc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -19,8 +19,8 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cBk-VB-WyS" id="Vri-2X-uut">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfR-Dj-2TO">
-                                            <rect key="frame" x="44" y="11" width="284" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SfR-Dj-2TO">
+                                            <rect key="frame" x="44" y="11" width="216" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <color key="textColor" red="0.01176470588" green="0.66274509800000003" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -84,18 +84,29 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e9k-L1-Tx3" customClass="M13ProgressViewRing">
+                                                    <rect key="frame" x="12" y="11" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="XdQ-iJ-mYn"/>
+                                                        <constraint firstAttribute="height" constant="40" id="lX1-xc-AA8"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" red="0.85416666669999997" green="0.85416666669999997" blue="0.85416666669999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="120" id="2PB-Wr-LuD"/>
                                                 <constraint firstAttribute="width" constant="80" id="5zr-9j-goJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="ixL-qy-fbC" secondAttribute="trailing" constant="27" id="Adg-b6-cm9"/>
+                                                <constraint firstAttribute="bottom" secondItem="e9k-L1-Tx3" secondAttribute="bottom" constant="10" id="Exf-Mk-6Ho"/>
                                                 <constraint firstItem="ixL-qy-fbC" firstAttribute="leading" secondItem="7qJ-LZ-p9m" secondAttribute="leading" id="HHM-Pl-qmK"/>
                                                 <constraint firstAttribute="trailing" secondItem="ixL-qy-fbC" secondAttribute="trailing" constant="55" id="HlU-Rk-ePd"/>
                                                 <constraint firstAttribute="bottom" secondItem="ixL-qy-fbC" secondAttribute="bottom" constant="5" id="QB0-JZ-EBv"/>
                                                 <constraint firstItem="ixL-qy-fbC" firstAttribute="leading" secondItem="7qJ-LZ-p9m" secondAttribute="leading" constant="28" id="QCy-mc-wwe"/>
                                                 <constraint firstItem="ixL-qy-fbC" firstAttribute="top" secondItem="7qJ-LZ-p9m" secondAttribute="top" constant="6" id="Vjv-j4-qbK"/>
+                                                <constraint firstAttribute="trailing" secondItem="e9k-L1-Tx3" secondAttribute="trailing" constant="68" id="m20-4W-Ott"/>
                                                 <constraint firstAttribute="bottom" secondItem="ixL-qy-fbC" secondAttribute="bottom" constant="5" id="ri2-aO-o99"/>
+                                                <constraint firstItem="e9k-L1-Tx3" firstAttribute="top" secondItem="7qJ-LZ-p9m" secondAttribute="top" constant="11" id="syd-dq-UTd"/>
+                                                <constraint firstItem="e9k-L1-Tx3" firstAttribute="leading" secondItem="7qJ-LZ-p9m" secondAttribute="leading" constant="12" id="tcL-u0-bdS"/>
                                                 <constraint firstItem="ixL-qy-fbC" firstAttribute="top" secondItem="7qJ-LZ-p9m" secondAttribute="top" constant="6" id="xCa-A0-h1h"/>
                                             </constraints>
                                             <variation key="default">
@@ -134,6 +145,7 @@
                                 <connections>
                                     <outlet property="arrivalTime" destination="ixL-qy-fbC" id="FCl-pd-OFw"/>
                                     <outlet property="busName" destination="isc-1n-4iP" id="CA8-5e-mr4"/>
+                                    <outlet property="progressView" destination="e9k-L1-Tx3" id="0YY-VE-Wsg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -142,6 +154,7 @@
                             <outlet property="delegate" destination="vGJ-Bz-Roh" id="6yu-O6-kyW"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="gh1-S5-Tk7"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DdQ-F5-f48" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

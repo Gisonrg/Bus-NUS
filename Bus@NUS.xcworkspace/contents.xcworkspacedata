@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Bus@NUS/Model/coreData/BusStop.swift">
-   </FileRef>
-   <FileRef
       location = "group:Bus@NUS.xcodeproj">
    </FileRef>
    <FileRef
