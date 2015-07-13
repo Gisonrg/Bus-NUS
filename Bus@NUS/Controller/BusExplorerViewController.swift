@@ -66,9 +66,6 @@ class BusExplorerViewController: UITableViewController, CLLocationManagerDelegat
         if let currentLocation = locationArray.last {
             // update the user location
             userLocation = currentLocation
-            println("Long: \(currentLocation.coordinate.longitude)")
-            println("Lat: \(currentLocation.coordinate.latitude)")
-            
             // re-arrange the table by distance
             sortBusStopByDistance()
         }

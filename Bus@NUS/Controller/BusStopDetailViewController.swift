@@ -15,7 +15,6 @@ class BusStopDetailViewController: UITableViewController, BusApiHelperDelegate {
     
     override func viewDidLoad() {
         setUpView()
-        initTimeTable()
         BusApiHelper.setDelegate(self)
         BusApiHelper.get(stop!)
         
@@ -24,6 +23,7 @@ class BusStopDetailViewController: UITableViewController, BusApiHelperDelegate {
     
     private func setUpView() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: "reloadData:")
+        initTimeTable()
     }
 
     // MARK: - Table view data source
@@ -75,8 +75,7 @@ class BusStopDetailViewController: UITableViewController, BusApiHelperDelegate {
         UIView.transitionWithView(tableView,
             duration:0.35,
             options:.TransitionCrossDissolve,
-            animations:
-            {
+            animations: {
                 self.tableView.reloadData()
             },
             completion: nil)
