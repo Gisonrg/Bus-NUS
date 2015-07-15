@@ -10,9 +10,14 @@ import UIKit
 import CoreLocation
 import Foundation
 
-class BusExplorerViewController: UITableViewController, CLLocationManagerDelegate {
+class BusExplorerViewController: UITableViewController {
     
     private let LOCATION_SERVICE_DISABLED = "Location service disabled"
+    
+    private let TITLE_NO_LOCATION_SERVICE = "Location service is disabled"
+    private let MSG_NO_LOCATION_SERVICE = "For best experience, please check your " +
+                                            "location setting, and enable location " +
+                                            "service of your phone."
     
     var busStopArray:[BusStop] = [BusStop]()
     var locationManager = CLLocationManager()
@@ -29,8 +34,53 @@ class BusExplorerViewController: UITableViewController, CLLocationManagerDelegat
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
     }
+
+    // MARK: - Table view data source
+
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return busStopArray.count
+    }
+
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("BusStopTableViewCell", forIndexPath: indexPath) as! BusStopTableViewCell
+        cell.stopName.text = busStopArray[indexPath.row].name
+        return cell
+    }
     
-    // MARK: - Location service
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60.0
+    }
+
+    // MARK: - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
+        let indexPath = tableView.indexPathForSelectedRow()
+        let detailViewController = segue.destinationViewController as! BusStopDetailViewController
+        let selectedBusStop = busStopArray[indexPath!.row]
+        detailViewController.title = selectedBusStop.name
+        detailViewController.stop = selectedBusStop
+        tableView.deselectRowAtIndexPath(indexPath!, animated: true)
+    }
+    
+    // MARK: - Alert View helper
+    
+    func presentAlertViewWithTitle(#title: String, message: String) {
+        let alertController = UIAlertController(title: title, message:
+            message, preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "Okay", style: .Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+
+}
+
+// MARK: - Location service
+extension BusExplorerViewController : CLLocationManagerDelegate {
     func setUpLocationService() {
         if CLLocationManager.locationServicesEnabled() {
             switch CLLocationManager.authorizationStatus() {
@@ -39,11 +89,13 @@ class BusExplorerViewController: UITableViewController, CLLocationManagerDelegat
             case .AuthorizedWhenInUse:
                 configLocationManager(startImmediately: true)
             case .Denied:
+                presentAlertViewWithTitle(title: TITLE_NO_LOCATION_SERVICE, message: MSG_NO_LOCATION_SERVICE)
                 NSLog(LOCATION_SERVICE_DISABLED)
             case .NotDetermined:
                 configLocationManager(startImmediately: false)
                 self.locationManager.requestWhenInUseAuthorization()
             case .Restricted:
+                presentAlertViewWithTitle(title: TITLE_NO_LOCATION_SERVICE, message: MSG_NO_LOCATION_SERVICE)
                 NSLog(LOCATION_SERVICE_DISABLED)
             }
         }
@@ -87,32 +139,4 @@ class BusExplorerViewController: UITableViewController, CLLocationManagerDelegat
         
         return distanceOfBusStop1 < distanceOfBusStop2
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return busStopArray.count
-    }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("BusStopTableViewCell", forIndexPath: indexPath) as! BusStopTableViewCell
-        cell.stopName.text = busStopArray[indexPath.row].name
-        return cell
-    }
-
-    // MARK: - Navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-        let indexPath = tableView.indexPathForSelectedRow()
-        let detailViewController = segue.destinationViewController as! BusStopDetailViewController
-        let selectedBusStop = busStopArray[indexPath!.row]
-        detailViewController.title = selectedBusStop.name
-        detailViewController.stop = selectedBusStop
-    }
-
 }

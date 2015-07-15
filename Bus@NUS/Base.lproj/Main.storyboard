@@ -14,18 +14,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BusStopTableViewCell" id="cBk-VB-WyS" customClass="BusStopTableViewCell" customModule="Bus_NUS" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="BusStopTableViewCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BusStopTableViewCell" rowHeight="60" id="cBk-VB-WyS" customClass="BusStopTableViewCell" customModule="Bus_NUS" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cBk-VB-WyS" id="Vri-2X-uut">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SfR-Dj-2TO">
-                                            <rect key="frame" x="44" y="11" width="216" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <color key="textColor" red="0.01176470588" green="0.66274509800000003" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SfR-Dj-2TO">
+                                            <rect key="frame" x="25" y="16" width="300" height="28"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="18j-X1-1Hl"/>
+                                                <constraint firstAttribute="width" constant="216" id="IsN-3B-fSa"/>
+                                                <constraint firstAttribute="width" constant="300" id="V2X-zo-oHy"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="18j-X1-1Hl"/>
+                                                    <exclude reference="IsN-3B-fSa"/>
+                                                </mask>
+                                            </variation>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SfR-Dj-2TO" firstAttribute="leading" secondItem="Vri-2X-uut" secondAttribute="leadingMargin" constant="17" id="4eD-CX-NFC"/>
+                                        <constraint firstItem="SfR-Dj-2TO" firstAttribute="top" secondItem="Vri-2X-uut" secondAttribute="topMargin" constant="6" id="BiD-fE-gQF"/>
+                                        <constraint firstItem="SfR-Dj-2TO" firstAttribute="top" secondItem="Vri-2X-uut" secondAttribute="topMargin" constant="8.5" id="OPq-Jz-hVn"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="SfR-Dj-2TO" secondAttribute="bottom" constant="5.5" id="bDQ-Mo-BfF"/>
+                                        <constraint firstItem="SfR-Dj-2TO" firstAttribute="leading" secondItem="Vri-2X-uut" secondAttribute="leadingMargin" constant="32" id="gg9-WO-GoX"/>
+                                        <constraint firstAttribute="centerY" secondItem="SfR-Dj-2TO" secondAttribute="centerY" constant="-0.25" id="uEq-7C-qaR"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="BiD-fE-gQF"/>
+                                            <exclude reference="bDQ-Mo-BfF"/>
+                                            <exclude reference="gg9-WO-GoX"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="stopName" destination="SfR-Dj-2TO" id="eBy-De-3G8"/>
@@ -60,8 +85,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A2" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isc-1n-4iP">
-                                            <rect key="frame" x="18" y="18" width="164" height="30"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <rect key="frame" x="18" y="15" width="164" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
