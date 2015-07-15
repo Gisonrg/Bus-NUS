@@ -8,14 +8,13 @@
 
 import UIKit
 
-class BusStopDetailViewController: UITableViewController, BusApiHelperDelegate {
+class BusStopDetailViewController: UITableViewController {
     
     var stop:BusStop?
     var timeTable:Dictionary<String, String> = Dictionary<String, String>()
     
     override func viewDidLoad() {
         setUpView()
-        initTimeTable()
         BusApiHelper.setDelegate(self)
         BusApiHelper.get(stop!)
         
@@ -24,7 +23,23 @@ class BusStopDetailViewController: UITableViewController, BusApiHelperDelegate {
     
     private func setUpView() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: "reloadData:")
+        initTimeTable()
     }
+    
+    private func initTimeTable() {
+        for bus in stop!.hasBus {
+            timeTable[bus.name] = "-"
+        }
+    }
+    
+    func setUpStop(stop:BusStop) {
+        self.stop = stop
+        initTimeTable()
+        BusApiHelper.setDelegate(self)
+        BusApiHelper.get(stop)
+        self.tableView.reloadData()
+    }
+    
 
     // MARK: - Table view data source
 
@@ -54,20 +69,15 @@ class BusStopDetailViewController: UITableViewController, BusApiHelperDelegate {
         return cell
     }
     
-    func setUpStop(stop:BusStop) {
-        self.stop = stop
-        initTimeTable()
-        BusApiHelper.setDelegate(self)
-        BusApiHelper.get(stop)
-        self.tableView.reloadData()
-    }
-    
     func reloadData(sender: AnyObject) {
         self.updateCells(false)
         BusApiHelper.get(stop!)
     }
-    
-    // MARK: - BusApiHelperDelegate
+
+}
+
+// MARK: - BusApiHelperDelegate
+extension BusStopDetailViewController : BusApiHelperDelegate {
     func onReceiveBusData(buses:[BusVo]) {
         for bus in buses {
             timeTable[bus.name] = bus.nextArrivalTime
@@ -75,8 +85,7 @@ class BusStopDetailViewController: UITableViewController, BusApiHelperDelegate {
         UIView.transitionWithView(tableView,
             duration:0.35,
             options:.TransitionCrossDissolve,
-            animations:
-            {
+            animations: {
                 self.tableView.reloadData()
             },
             completion: nil)
@@ -90,12 +99,6 @@ class BusStopDetailViewController: UITableViewController, BusApiHelperDelegate {
         }
         for cell in cells {
             shouldHide ? cell.hideLoading() : cell.startLoading()
-        }
-    }
-    
-    private func initTimeTable() {
-        for bus in stop!.hasBus {
-            timeTable[bus.name] = "-"
         }
     }
 }

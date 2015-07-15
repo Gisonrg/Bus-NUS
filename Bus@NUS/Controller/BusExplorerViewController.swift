@@ -7,15 +7,32 @@
 //
 
 import UIKit
+import CoreLocation
 import Foundation
 
 class BusExplorerViewController: UITableViewController {
     
+    private let LOCATION_SERVICE_DISABLED = "Location service disabled"
+    
+    private let TITLE_NO_LOCATION_SERVICE = "Location service is disabled"
+    private let MSG_NO_LOCATION_SERVICE = "For best experience, please check your " +
+                                            "location setting, and enable location " +
+                                            "service of your phone."
+    
     var busStopArray:[BusStop] = [BusStop]()
+    var locationManager = CLLocationManager()
+    var userLocation = CLLocation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpViewController()
+        
+    }
+    
+    private func setUpViewController() {
         self.title = "Bus@NUS"
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
     }
 
     // MARK: - Table view data source
@@ -33,6 +50,10 @@ class BusExplorerViewController: UITableViewController {
         cell.stopName.text = busStopArray[indexPath.row].name
         return cell
     }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60.0
+    }
 
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -43,6 +64,79 @@ class BusExplorerViewController: UITableViewController {
         let selectedBusStop = busStopArray[indexPath!.row]
         detailViewController.title = selectedBusStop.name
         detailViewController.stop = selectedBusStop
+        tableView.deselectRowAtIndexPath(indexPath!, animated: true)
+    }
+    
+    // MARK: - Alert View helper
+    
+    func presentAlertViewWithTitle(#title: String, message: String) {
+        let alertController = UIAlertController(title: title, message:
+            message, preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "Okay", style: .Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 
+}
+
+// MARK: - Location service
+extension BusExplorerViewController : CLLocationManagerDelegate {
+    func setUpLocationService() {
+        if CLLocationManager.locationServicesEnabled() {
+            switch CLLocationManager.authorizationStatus() {
+            case CLAuthorizationStatus.AuthorizedAlways:
+                configLocationManager(startImmediately: true)
+            case .AuthorizedWhenInUse:
+                configLocationManager(startImmediately: true)
+            case .Denied:
+                presentAlertViewWithTitle(title: TITLE_NO_LOCATION_SERVICE, message: MSG_NO_LOCATION_SERVICE)
+                NSLog(LOCATION_SERVICE_DISABLED)
+            case .NotDetermined:
+                configLocationManager(startImmediately: false)
+                self.locationManager.requestWhenInUseAuthorization()
+            case .Restricted:
+                presentAlertViewWithTitle(title: TITLE_NO_LOCATION_SERVICE, message: MSG_NO_LOCATION_SERVICE)
+                NSLog(LOCATION_SERVICE_DISABLED)
+            }
+        }
+    }
+    
+    func configLocationManager(#startImmediately: Bool){
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.distanceFilter = 100
+        if startImmediately{
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        setUpLocationService()
+    }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        let locationArray = locations as! [CLLocation]
+        if let currentLocation = locationArray.last {
+            // update the user location
+            userLocation = currentLocation
+            // re-arrange the table by distance
+            sortBusStopByDistance()
+        }
+    }
+    
+    /**
+        Sort the busStop array by the distance to current location
+    */
+    private func sortBusStopByDistance() {
+        busStopArray.sort(compareDistanceToCurrentLocation)
+        tableView.reloadData()
+    }
+    
+    private func compareDistanceToCurrentLocation(busStop1: BusStop, busStop2: BusStop) -> Bool {
+        var busStopLocation1 = CLLocation(latitude: busStop1.latitude, longitude: busStop1.longitude)
+        var busStopLocation2 = CLLocation(latitude: busStop2.latitude, longitude: busStop2.longitude)
+        var distanceOfBusStop1 = busStopLocation1.distanceFromLocation(userLocation)
+        var distanceOfBusStop2 = busStopLocation2.distanceFromLocation(userLocation)
+        
+        return distanceOfBusStop1 < distanceOfBusStop2
+    }
 }
