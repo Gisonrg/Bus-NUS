@@ -3,7 +3,7 @@
 //  Bus@NUS
 //
 //  Created by Jiang Sheng on 1/7/15.
-//  Copyright (c) 2015 Echx. All rights reserved.
+//  Copyright (c) 2015 Gisonrg. All rights reserved.
 //
 
 import UIKit
@@ -39,6 +39,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             NSLog("Cannot fetch busstop information.")
         }
+        
+        // configure the title font
+        let themeColor = AppUtilities.UIColorFromRGB("FFA600", alpha: 1.0)
+        let attributes = [NSFontAttributeName : UIFont(name: "JuliusSansOne-Regular", size: 20)!, NSForegroundColorAttributeName : themeColor]
+        UINavigationBar.appearance().titleTextAttributes = attributes
+        UINavigationBar.appearance().tintColor = themeColor
         
         return true
     }

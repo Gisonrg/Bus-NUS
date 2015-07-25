@@ -3,7 +3,7 @@
 //  Bus@NUSTests
 //
 //  Created by Jiang Sheng on 25/6/15.
-//  Copyright (c) 2015 Echx. All rights reserved.
+//  Copyright (c) 2015 Gisonrg. All rights reserved.
 //
 
 import UIKit

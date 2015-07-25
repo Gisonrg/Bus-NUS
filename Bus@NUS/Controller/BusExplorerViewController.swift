@@ -3,7 +3,7 @@
 //  Bus@NUS
 //
 //  Created by Jiang Sheng on 25/6/15.
-//  Copyright (c) 2015 Echx. All rights reserved.
+//  Copyright (c) 2015 Gisonrg. All rights reserved.
 //
 
 import UIKit
@@ -26,11 +26,11 @@ class BusExplorerViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViewController()
-        
     }
     
     private func setUpViewController() {
         self.title = "Bus@NUS"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "settingButton"), style: UIBarButtonItemStyle.Plain, target: self, action: "openSetting:")
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
     }
@@ -65,6 +65,18 @@ class BusExplorerViewController: UITableViewController {
         detailViewController.title = selectedBusStop.name
         detailViewController.stop = selectedBusStop
         tableView.deselectRowAtIndexPath(indexPath!, animated: true)
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+    }
+    
+    func openSetting(sender: AnyObject) {
+        let aboutVC = AboutViewController.getInstance()
+        // Start animation
+        UIView.beginAnimations("flip", context: nil)
+        self.navigationController!.pushViewController(aboutVC, animated: false)
+        UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: self.navigationController!.view, cache: false)
+        UIView.setAnimationDuration(0.8)
+        UIView.commitAnimations()
     }
     
     // MARK: - Alert View helper

@@ -10,6 +10,10 @@
 		980167811B43A1110016721A /* NextBusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980167801B43A1110016721A /* NextBusTableViewCell.swift */; };
 		980167831B43A1350016721A /* BusStopDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980167821B43A1350016721A /* BusStopDetailViewController.swift */; };
 		980167871B43A46D0016721A /* BusApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980167861B43A46D0016721A /* BusApiHelper.swift */; };
+		984204B11B612E2800CB2743 /* JuliusSansOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 984204B01B612E2800CB2743 /* JuliusSansOne-Regular.ttf */; };
+		984204B31B612FB700CB2743 /* AppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984204B21B612FB700CB2743 /* AppUtilities.swift */; };
+		984204B51B61319400CB2743 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 984204B41B61319400CB2743 /* OpenSans-Light.ttf */; };
+		984204B71B61453000CB2743 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984204B61B61453000CB2743 /* AboutViewController.swift */; };
 		9876F1941B50C93E00DCA1DD /* M13ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9876F1911B50C93E00DCA1DD /* M13ProgressView.m */; };
 		9876F1951B50C93E00DCA1DD /* M13ProgressViewRing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9876F1931B50C93E00DCA1DD /* M13ProgressViewRing.m */; };
 		98A90C951B3C4377004FB118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A90C941B3C4377004FB118 /* AppDelegate.swift */; };
@@ -45,6 +49,10 @@
 		980167821B43A1350016721A /* BusStopDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopDetailViewController.swift; sourceTree = "<group>"; };
 		980167841B43A3FA0016721A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Pods/Alamofire.framework"; sourceTree = "<group>"; };
 		980167861B43A46D0016721A /* BusApiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusApiHelper.swift; sourceTree = "<group>"; };
+		984204B01B612E2800CB2743 /* JuliusSansOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "JuliusSansOne-Regular.ttf"; path = "Font/JuliusSansOne-Regular.ttf"; sourceTree = "<group>"; };
+		984204B21B612FB700CB2743 /* AppUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtilities.swift; sourceTree = "<group>"; };
+		984204B41B61319400CB2743 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "Font/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		984204B61B61453000CB2743 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		9876F18F1B50C93E00DCA1DD /* Bus@NUS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bus@NUS-Bridging-Header.h"; sourceTree = "<group>"; };
 		9876F1901B50C93E00DCA1DD /* M13ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M13ProgressView.h; path = Lib/M13ProgressView/M13ProgressView.h; sourceTree = "<group>"; };
 		9876F1911B50C93E00DCA1DD /* M13ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13ProgressView.m; path = Lib/M13ProgressView/M13ProgressView.m; sourceTree = "<group>"; };
@@ -94,6 +102,15 @@
 				5A40CC7FEA9C76EB2A85E1FB /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		984204AB1B612DF000CB2743 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				984204B41B61319400CB2743 /* OpenSans-Light.ttf */,
+				984204B01B612E2800CB2743 /* JuliusSansOne-Regular.ttf */,
+			);
+			name = Font;
 			sourceTree = "<group>";
 		};
 		9876F18D1B50C8B500DCA1DD /* Lib */ = {
@@ -151,6 +168,7 @@
 		98A90C921B3C4377004FB118 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				984204AB1B612DF000CB2743 /* Font */,
 				9876F18F1B50C93E00DCA1DD /* Bus@NUS-Bridging-Header.h */,
 				98D89E501B44E3970058EECB /* busSeed.json */,
 				98A90C941B3C4377004FB118 /* AppDelegate.swift */,
@@ -184,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				98A90CBC1B3C4469004FB118 /* BusExplorerViewController.swift */,
+				984204B61B61453000CB2743 /* AboutViewController.swift */,
 				980167821B43A1350016721A /* BusStopDetailViewController.swift */,
 			);
 			path = Controller;
@@ -211,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				980167861B43A46D0016721A /* BusApiHelper.swift */,
+				984204B21B612FB700CB2743 /* AppUtilities.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -289,10 +309,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0630;
-				ORGANIZATIONNAME = Echx;
+				ORGANIZATIONNAME = Gisonrg;
 				TargetAttributes = {
 					98A90C8E1B3C4377004FB118 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 4QY7739P4X;
 					};
 					98A90CA31B3C4378004FB118 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -324,6 +345,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984204B51B61319400CB2743 /* OpenSans-Light.ttf in Resources */,
+				984204B11B612E2800CB2743 /* JuliusSansOne-Regular.ttf in Resources */,
 				98A90C9A1B3C4378004FB118 /* Main.storyboard in Resources */,
 				98A90C9F1B3C4378004FB118 /* LaunchScreen.xib in Resources */,
 				98A90C9C1B3C4378004FB118 /* Images.xcassets in Resources */,
@@ -401,7 +424,9 @@
 				980167871B43A46D0016721A /* BusApiHelper.swift in Sources */,
 				98A90CBF1B3C44B3004FB118 /* BusStopTableViewCell.swift in Sources */,
 				98D89E4B1B4462520058EECB /* BusStop.swift in Sources */,
+				984204B31B612FB700CB2743 /* AppUtilities.swift in Sources */,
 				98D89E431B4448150058EECB /* Bus@NUS.xcdatamodeld in Sources */,
+				984204B71B61453000CB2743 /* AboutViewController.swift in Sources */,
 				9876F1951B50C93E00DCA1DD /* M13ProgressViewRing.m in Sources */,
 				98A90C951B3C4377004FB118 /* AppDelegate.swift in Sources */,
 				98D89E551B4595050058EECB /* BusVo.swift in Sources */,
@@ -533,8 +558,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Bus@NUS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bus@NUS/Bus@NUS-Bridging-Header.h";
@@ -548,11 +575,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods",
 				);
 				INFOPLIST_FILE = "Bus@NUS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Bus@NUS/Bus@NUS-Bridging-Header.h";
