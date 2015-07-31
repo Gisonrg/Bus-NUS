@@ -10,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Built by Gison" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="built by Gison From Echx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
                     <rect key="frame" x="20" y="439" width="441" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="441" id="4C8-ee-ejJ"/>
@@ -31,7 +31,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="busIcon" translatesAutoresizingMaskIntoConstraints="NO" id="jwP-C3-aSv">
-                    <rect key="frame" x="170" y="162" width="141" height="133"/>
+                    <rect key="frame" x="170" y="78" width="141" height="133"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="141" id="38n-h6-rN3"/>
                         <constraint firstAttribute="height" constant="133" id="iS6-0f-M3m"/>
@@ -46,8 +46,8 @@
                 <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="Kzo-t9-V3l"/>
                 <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="MfP-vx-nX0"/>
                 <constraint firstAttribute="centerX" secondItem="8ie-xW-0ye" secondAttribute="centerX" id="ZEH-qu-HZ9"/>
-                <constraint firstItem="98W-ps-pjS" firstAttribute="top" secondItem="jwP-C3-aSv" secondAttribute="bottom" constant="8" id="cqm-7Z-kkQ"/>
-                <constraint firstItem="jwP-C3-aSv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="162" id="mDc-hU-y9b"/>
+                <constraint firstItem="98W-ps-pjS" firstAttribute="top" secondItem="jwP-C3-aSv" secondAttribute="bottom" constant="92" id="cqm-7Z-kkQ"/>
+                <constraint firstItem="jwP-C3-aSv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="78" id="mDc-hU-y9b"/>
                 <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="nt1-Lb-We7"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
