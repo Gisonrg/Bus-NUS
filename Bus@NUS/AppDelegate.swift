@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let attributes = [NSFontAttributeName : UIFont(name: "JuliusSansOne-Regular", size: 20)!, NSForegroundColorAttributeName : themeColor]
         UINavigationBar.appearance().titleTextAttributes = attributes
         UINavigationBar.appearance().tintColor = themeColor
-        
+                
         return true
     }
     

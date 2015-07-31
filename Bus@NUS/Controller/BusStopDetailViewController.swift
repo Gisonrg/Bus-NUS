@@ -17,13 +17,24 @@ class BusStopDetailViewController: UITableViewController {
         setUpView()
         BusApiHelper.setDelegate(self)
         BusApiHelper.get(stop!)
-        
         super.viewDidLoad()
     }
     
     private func setUpView() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: "reloadData:")
         initTimeTable()
+        configureTitleView()
+    }
+    
+    private func configureTitleView() {
+        let busTitleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        busTitleLabel.text = self.navigationItem.title
+        busTitleLabel.textColor = AppUtilities.UIColorFromRGB("FFA600", alpha: 1.0)
+        busTitleLabel.font = UIFont(name: "JuliusSansOne-Regular", size: 20)!
+        busTitleLabel.backgroundColor = UIColor.clearColor()
+        busTitleLabel.textAlignment = NSTextAlignment.Center
+        busTitleLabel.adjustsFontSizeToFitWidth = true
+        self.navigationItem.titleView = busTitleLabel
     }
     
     private func initTimeTable() {
