@@ -72,6 +72,10 @@ class BusStopDetailViewController: UITableViewController {
         if let currentStop = stop {
             let bus = currentStop.hasBus.objectAtIndex(indexPath.row) as! Bus
             cell.busName.text = bus.name
+            // hide "N.A" since it's ugly
+            if timeTable[bus.name]?.contains("N.A") != nil {
+                timeTable[bus.name] = "-"
+            }
             cell.arrivalTime.text = timeTable[bus.name]
             cell.progressView.secondaryColor = UIColor.blackColor()
             cell.startLoading()
