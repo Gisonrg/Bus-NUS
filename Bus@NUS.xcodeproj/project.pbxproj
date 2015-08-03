@@ -14,6 +14,7 @@
 		984204B31B612FB700CB2743 /* AppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984204B21B612FB700CB2743 /* AppUtilities.swift */; };
 		984204B51B61319400CB2743 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 984204B41B61319400CB2743 /* OpenSans-Light.ttf */; };
 		984204B71B61453000CB2743 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984204B61B61453000CB2743 /* AboutViewController.swift */; };
+		985E62491B6FA914007AA967 /* String+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985E62481B6FA914007AA967 /* String+Utilities.swift */; };
 		9876F1941B50C93E00DCA1DD /* M13ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9876F1911B50C93E00DCA1DD /* M13ProgressView.m */; };
 		9876F1951B50C93E00DCA1DD /* M13ProgressViewRing.m in Sources */ = {isa = PBXBuildFile; fileRef = 9876F1931B50C93E00DCA1DD /* M13ProgressViewRing.m */; };
 		98A90C951B3C4377004FB118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A90C941B3C4377004FB118 /* AppDelegate.swift */; };
@@ -53,6 +54,7 @@
 		984204B21B612FB700CB2743 /* AppUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtilities.swift; sourceTree = "<group>"; };
 		984204B41B61319400CB2743 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "Font/OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		984204B61B61453000CB2743 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		985E62481B6FA914007AA967 /* String+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utilities.swift"; sourceTree = "<group>"; };
 		9876F18F1B50C93E00DCA1DD /* Bus@NUS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bus@NUS-Bridging-Header.h"; sourceTree = "<group>"; };
 		9876F1901B50C93E00DCA1DD /* M13ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = M13ProgressView.h; path = Lib/M13ProgressView/M13ProgressView.h; sourceTree = "<group>"; };
 		9876F1911B50C93E00DCA1DD /* M13ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = M13ProgressView.m; path = Lib/M13ProgressView/M13ProgressView.m; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			children = (
 				980167861B43A46D0016721A /* BusApiHelper.swift */,
 				984204B21B612FB700CB2743 /* AppUtilities.swift */,
+				985E62481B6FA914007AA967 /* String+Utilities.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				98D89E4B1B4462520058EECB /* BusStop.swift in Sources */,
 				984204B31B612FB700CB2743 /* AppUtilities.swift in Sources */,
 				98D89E431B4448150058EECB /* Bus@NUS.xcdatamodeld in Sources */,
+				985E62491B6FA914007AA967 /* String+Utilities.swift in Sources */,
 				984204B71B61453000CB2743 /* AboutViewController.swift in Sources */,
 				9876F1951B50C93E00DCA1DD /* M13ProgressViewRing.m in Sources */,
 				98A90C951B3C4377004FB118 /* AppDelegate.swift in Sources */,
