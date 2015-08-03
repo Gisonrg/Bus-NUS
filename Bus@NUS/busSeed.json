@@ -6,8 +6,8 @@
     "id": "AS7",
     "longitude": 103.7717
   }, {
-    "buses": ["A1", "BTC1", "D1 (To BIZ2)", "D2 (To CP11)",
-      "D2 (To UTown)"
+    "buses": ["A1", "BTC1", "D1 (To BIZ2)",
+      "D2 (To UTown)", "A1E"
     ],
     "latitude": 1.29327065,
     "name": "BIZ 2",
@@ -20,7 +20,7 @@
     "id": "BUKITTIMAH-BTC2",
     "longitude": 103.817785565448
   }, {
-    "buses": ["D1 (To BIZ2)", "A1", "B", "BTC1"],
+    "buses": ["D1 (To BIZ2)", "A1", "B", "BTC1", "A1E"],
     "latitude": 1.29661556,
     "name": "Central Library",
     "id": "CENLIB",
@@ -32,7 +32,7 @@
     "id": "COM2",
     "longitude": 103.77370813
   }, {
-    "buses": ["A2", "D1 (To UTown)", "B"],
+    "buses": ["A2", "D1 (To UTown)", "B", "A2E(AM)"],
     "latitude": 1.29715571,
     "name": "Computer Centre",
     "id": "COMCEN",
@@ -44,13 +44,13 @@
     "id": "HSSML-OPP",
     "longitude": 103.77479454
   }, {
-    "buses": ["A1", "D2 (To UTown)"],
+    "buses": ["A1", "D2 (To UTown)", "A1E"],
     "latitude": 1.294762,
     "name": "Kent Ridge MRT",
     "id": "KR-MRT",
     "longitude": 103.784294
   }, {
-    "buses": ["A2", "D2 (To CP11)"],
+    "buses": ["A2", "D2 (To CP11)", "A2E(AM)"],
     "latitude": 1.295054,
     "name": "Opp Kent Ridge MRT",
     "id": "KR-MRT-OPP",
@@ -62,13 +62,13 @@
     "id": "LT13",
     "longitude": 103.77061436
   }, {
-    "buses": ["B", "D1 (To UTown)", "A2"],
+    "buses": ["B", "D1 (To UTown)", "A2", "A2E(AM)"],
     "latitude": 1.29541598,
     "name": "Ventus (Opp LT13)",
     "id": "LT13-OPP",
     "longitude": 103.77066248
   }, {
-    "buses": ["A1", "D2 (To UTown)", "C"],
+    "buses": ["A1", "D2 (To UTown)", "C", "A1E"],
     "latitude": 1.29745904,
     "name": "LT29",
     "id": "LT29",
@@ -118,7 +118,7 @@
     "id": "RAFFLES",
     "longitude": 103.77270731
   }, {
-    "buses": ["A2", "C", "D2 (To CP11)"],
+    "buses": ["A2", "C", "D2 (To CP11)", "A2E(AM)"],
     "latitude": 1.29750725,
     "name": "S17",
     "id": "S17",
@@ -202,7 +202,7 @@
     "id": "NUSS-OPP",
     "longitude": 103.772344
   }, {
-    "buses": ["A1", "A2", "BTC1", "D2 (To UTown)"],
+    "buses": ["A1", "A2", "BTC1", "D2 (To UTown)", "A1E"],
     "latitude": 1.29185277,
     "name": "Prince George's Park Terminal",
     "id": "PGPT",
