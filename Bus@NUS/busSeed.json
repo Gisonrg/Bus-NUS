@@ -32,7 +32,7 @@
     "id": "COM2",
     "longitude": 103.77370813
   }, {
-    "buses": ["A2", "D1 (To UTown)", "B", "A2E(AM)"],
+    "buses": ["A2", "D1 (To UTown)", "B", "A2E(AM)", "A2E(PM)"],
     "latitude": 1.29715571,
     "name": "Computer Centre",
     "id": "COMCEN",
@@ -50,7 +50,7 @@
     "id": "KR-MRT",
     "longitude": 103.784294
   }, {
-    "buses": ["A2", "D2 (To CP11)", "A2E(AM)"],
+    "buses": ["A2", "D2 (To CP11)", "A2E(AM)", "A2E(PM)"],
     "latitude": 1.295054,
     "name": "Opp Kent Ridge MRT",
     "id": "KR-MRT-OPP",
@@ -62,7 +62,7 @@
     "id": "LT13",
     "longitude": 103.77061436
   }, {
-    "buses": ["B", "D1 (To UTown)", "A2", "A2E(AM)"],
+    "buses": ["B", "D1 (To UTown)", "A2", "A2E(AM)", "A2E(PM)"],
     "latitude": 1.29541598,
     "name": "Ventus (Opp LT13)",
     "id": "LT13-OPP",
@@ -118,7 +118,7 @@
     "id": "RAFFLES",
     "longitude": 103.77270731
   }, {
-    "buses": ["A2", "C", "D2 (To CP11)", "A2E(AM)"],
+    "buses": ["A2", "C", "D2 (To CP11)", "A2E(AM)", "A2E(PM)"],
     "latitude": 1.29750725,
     "name": "S17",
     "id": "S17",
