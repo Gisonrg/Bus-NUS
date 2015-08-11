@@ -106,7 +106,7 @@
     "id": "PGP14-15",
     "longitude": 103.77789507
   }, {
-    "buses": ["A1", "A2", "BTC1", "D2"],
+    "buses": ["A1", "A2", "BTC1", "D2 (To CP11)"],
     "latitude": 1.29188843,
     "name": "PGPR",
     "id": "PGP",

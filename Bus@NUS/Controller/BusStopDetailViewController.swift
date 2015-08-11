@@ -73,7 +73,7 @@ class BusStopDetailViewController: UITableViewController {
             let bus = currentStop.hasBus.objectAtIndex(indexPath.row) as! Bus
             cell.busName.text = bus.name
             // hide "N.A" since it's ugly
-            if timeTable[bus.name]?.contains("N.A") != nil {
+            if timeTable[bus.name] == "N.A" {
                 timeTable[bus.name] = "-"
             }
             cell.arrivalTime.text = timeTable[bus.name]
