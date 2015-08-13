@@ -26,7 +26,7 @@
     "id": "CENLIB",
     "longitude": 103.77252342
   }, {
-    "buses": ["A1", "A2", "B", "D1 (To BIZ2)", "D1 (To UTown)"],
+    "buses": ["A1", "A2", "B", "D1 (To BIZ2)", "D1 (To UTown)", "P1 (CLB-UT)"],
     "latitude": 1.29434373,
     "name": "COM2 (CP13)",
     "id": "COM2",
@@ -68,7 +68,7 @@
     "id": "LT13-OPP",
     "longitude": 103.77066248
   }, {
-    "buses": ["A1", "D2 (To UTown)", "C", "A1E"],
+    "buses": ["A1", "D2 (To UTown)", "C", "A1E", "P2 (FoS-UT)"],
     "latitude": 1.29745904,
     "name": "LT29",
     "id": "LT29",
@@ -148,10 +148,10 @@
     "id": "UHALL-OPP",
     "longitude": 103.77793184
   }, {
-    "buses": ["D1 (To UTown)", "D2 (To UTown)"],
+    "buses": ["D1 (To UTown)", "D2 (To UTown)", "P1 (UT-CLB)", "P2 (UT-FoS)"],
     "latitude": 1.30361434,
     "name": "University Town",
-    "id": "UTOWN",
+    "id": "UTown",
     "longitude": 103.77431692
   }, {
     "buses": ["A1", "B", "BTC1", "D1 (To BIZ2)"],
@@ -207,5 +207,6 @@
     "name": "Prince George's Park Terminal",
     "id": "PGPT",
     "longitude": 103.7804888
-  }]
+  }],
+  "last_modified" : "2015-08-13 23:30"
 }

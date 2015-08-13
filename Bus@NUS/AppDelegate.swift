@@ -13,6 +13,8 @@ import SwiftyJSON
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    private let keyForLastModified = "last_modified"
+    
     var window: UIWindow?
     
     
@@ -58,23 +60,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             error: &error)
 
         if (results == 0) {
-            
-            var fetchError: NSError? = nil
-            
-            let results =
-            self.managedObjectContext!.executeFetchRequest(fetchRequest,
-                error: &fetchError) as! [BusStop]
-            
-            for object in results {
-                self.managedObjectContext!.deleteObject(object)
-            }
-            
-            self.saveContext()
             importJSONSeedData()
+        } else {
+            // check if need to update the date and time
+            let jsonURL = NSBundle.mainBundle().URLForResource("busSeed", withExtension: "json")
+            let json = NSData(contentsOfURL: jsonURL!)
+            let jsonData = JSON(data: json!)
+            let lastModifiedDateString = jsonData["last_modified"].string
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+            let parsedDate = dateFormatter.dateFromString(lastModifiedDateString!)
+            
+            let defaults = NSUserDefaults.standardUserDefaults()
+            let savedModifiedDate = defaults.objectForKey(keyForLastModified) as! NSDate
+            
+            if savedModifiedDate < parsedDate! {
+                // We need to update the data (:
+                importJSONSeedData()
+            }
         }
+        
     }
     
     func importJSONSeedData() {
+        // Delete old data
+        let fetchRequest = NSFetchRequest(entityName: "BusStop")
+        var fetchError: NSError? = nil
+        let results =
+        self.managedObjectContext!.executeFetchRequest(fetchRequest,
+            error: &fetchError) as! [BusStop]
+        
+        for object in results {
+            self.managedObjectContext!.deleteObject(object)
+        }
+        
         let jsonURL = NSBundle.mainBundle().URLForResource("busSeed", withExtension: "json")
         let json = NSData(contentsOfURL: jsonURL!)
         let jsonData = JSON(data: json!)
@@ -85,6 +104,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let busEntity = NSEntityDescription.entityForName("Bus", inManagedObjectContext: managedObjectContext!)
         let stopArray: Array<JSON> = jsonData["locations"].arrayValue
+        
+        // every time import, save the last modified date
+        let lastModifiedDateString = jsonData["last_modified"].string
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let lastModifiedDate = dateFormatter.dateFromString(lastModifiedDateString!)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(lastModifiedDate, forKey: keyForLastModified)
         
         for stop in stopArray {
             let currentStop = BusStop(entity: busStopEntity!, insertIntoManagedObjectContext: managedObjectContext!)
