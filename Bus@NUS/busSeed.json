@@ -20,13 +20,13 @@
     "id": "BUKITTIMAH-BTC2",
     "longitude": 103.817785565448
   }, {
-    "buses": ["D1 (To BIZ2)", "A1", "B", "BTC1", "A1E"],
+    "buses": ["D1 (To BIZ2)", "A1", "B", "BTC1", "A1E", "P1 (CLB-UT)"],
     "latitude": 1.29661556,
     "name": "Central Library",
     "id": "CENLIB",
     "longitude": 103.77252342
   }, {
-    "buses": ["A1", "A2", "B", "D1 (To BIZ2)", "D1 (To UTown)", "P1 (CLB-UT)"],
+    "buses": ["A1", "A2", "B", "D1 (To BIZ2)", "D1 (To UTown)"],
     "latitude": 1.29434373,
     "name": "COM2 (CP13)",
     "id": "COM2",
