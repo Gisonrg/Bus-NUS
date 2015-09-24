@@ -59,7 +59,7 @@ class BusExplorerViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
-        let indexPath = tableView.indexPathForSelectedRow()
+        let indexPath = tableView.indexPathForSelectedRow
         let detailViewController = segue.destinationViewController as! BusStopDetailViewController
         let selectedBusStop = busStopArray[indexPath!.row]
         detailViewController.title = selectedBusStop.name
@@ -81,7 +81,7 @@ class BusExplorerViewController: UITableViewController {
     
     // MARK: - Alert View helper
     
-    func presentAlertViewWithTitle(#title: String, message: String) {
+    func presentAlertViewWithTitle(title: String, message: String) {
         let alertController = UIAlertController(title: title, message:
             message, preferredStyle: .Alert)
         alertController.addAction(UIAlertAction(title: "Okay", style: .Default,handler: nil))
@@ -97,23 +97,23 @@ extension BusExplorerViewController : CLLocationManagerDelegate {
         if CLLocationManager.locationServicesEnabled() {
             switch CLLocationManager.authorizationStatus() {
             case CLAuthorizationStatus.AuthorizedAlways:
-                configLocationManager(startImmediately: true)
+                configLocationManager(true)
             case .AuthorizedWhenInUse:
-                configLocationManager(startImmediately: true)
+                configLocationManager(true)
             case .Denied:
-                presentAlertViewWithTitle(title: TITLE_NO_LOCATION_SERVICE, message: MSG_NO_LOCATION_SERVICE)
+                presentAlertViewWithTitle(TITLE_NO_LOCATION_SERVICE, message: MSG_NO_LOCATION_SERVICE)
                 NSLog(LOCATION_SERVICE_DISABLED)
             case .NotDetermined:
-                configLocationManager(startImmediately: false)
+                configLocationManager(false)
                 self.locationManager.requestWhenInUseAuthorization()
             case .Restricted:
-                presentAlertViewWithTitle(title: TITLE_NO_LOCATION_SERVICE, message: MSG_NO_LOCATION_SERVICE)
+                presentAlertViewWithTitle(TITLE_NO_LOCATION_SERVICE, message: MSG_NO_LOCATION_SERVICE)
                 NSLog(LOCATION_SERVICE_DISABLED)
             }
         }
     }
     
-    func configLocationManager(#startImmediately: Bool){
+    func configLocationManager(startImmediately: Bool){
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.distanceFilter = 100
         if startImmediately{
@@ -121,13 +121,12 @@ extension BusExplorerViewController : CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         setUpLocationService()
     }
     
-    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        let locationArray = locations as! [CLLocation]
-        if let currentLocation = locationArray.last {
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let currentLocation = locations.last {
             // update the user location
             userLocation = currentLocation
             // re-arrange the table by distance
@@ -139,15 +138,15 @@ extension BusExplorerViewController : CLLocationManagerDelegate {
         Sort the busStop array by the distance to current location
     */
     private func sortBusStopByDistance() {
-        busStopArray.sort(compareDistanceToCurrentLocation)
+        busStopArray.sortInPlace(compareDistanceToCurrentLocation)
         tableView.reloadData()
     }
     
     private func compareDistanceToCurrentLocation(busStop1: BusStop, busStop2: BusStop) -> Bool {
-        var busStopLocation1 = CLLocation(latitude: busStop1.latitude, longitude: busStop1.longitude)
-        var busStopLocation2 = CLLocation(latitude: busStop2.latitude, longitude: busStop2.longitude)
-        var distanceOfBusStop1 = busStopLocation1.distanceFromLocation(userLocation)
-        var distanceOfBusStop2 = busStopLocation2.distanceFromLocation(userLocation)
+        let busStopLocation1 = CLLocation(latitude: busStop1.latitude, longitude: busStop1.longitude)
+        let busStopLocation2 = CLLocation(latitude: busStop2.latitude, longitude: busStop2.longitude)
+        let distanceOfBusStop1 = busStopLocation1.distanceFromLocation(userLocation)
+        let distanceOfBusStop2 = busStopLocation2.distanceFromLocation(userLocation)
         
         return distanceOfBusStop1 < distanceOfBusStop2
     }

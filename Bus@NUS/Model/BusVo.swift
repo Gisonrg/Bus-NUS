@@ -19,7 +19,7 @@ class BusVo: NSObject {
     }
     
     class func getBusVoFromBusDto(busDto:Bus) -> BusVo {
-        var newBus = BusVo(name: busDto.name, nextTime: "")
+        let newBus = BusVo(name: busDto.name, nextTime: "")
         return newBus
     }
 }

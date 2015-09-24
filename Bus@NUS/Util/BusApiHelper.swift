@@ -31,24 +31,25 @@ class BusApiHelper: NSObject {
     }
     
     private func getRawDataForStop(stop:BusStop) {
-        Alamofire.request(.GET, baseUrl + stop.id)
-            .responseJSON { (request, response, json, error) in
-                if(error != nil) {
-                    NSLog("Error: \(error)")
+           Alamofire.request(.GET, baseUrl + stop.id)
+            .responseJSON { (_, _, result) -> Void in
+                guard result.isSuccess else {
+                    NSLog("Fail to load raw data.")
                     self.delegate?.onReceiveBusData([])
-                } else {
-                    var json = JSON(json!)
-                    var busArray = [BusVo]()
-                    if json["shuttles"].type == Type.Dictionary {
-                        busArray.append(BusVo(name: json["shuttles"]["name"].string!, nextTime: json["shuttles"]["arrivalTime"].string!))
-                    } else {
-                        let list: Array<JSON> = json["shuttles"].arrayValue
-                        for bus in list {
-                            busArray.append(BusVo(name: bus["name"].string!, nextTime: bus["arrivalTime"].string!))
-                        }
-                    }
-                    self.delegate?.onReceiveBusData(busArray)
+                    return
                 }
-            }
+                
+                var json = JSON(result.value!)
+                var busArray = [BusVo]()
+                if json["shuttles"].type == Type.Dictionary {
+                    busArray.append(BusVo(name: json["shuttles"]["name"].string!, nextTime: json["shuttles"]["arrivalTime"].string!))
+                } else {
+                    let list: Array<JSON> = json["shuttles"].arrayValue
+                    for bus in list {
+                        busArray.append(BusVo(name: bus["name"].string!, nextTime: bus["arrivalTime"].string!))
+                    }
+                }
+                self.delegate?.onReceiveBusData(busArray)
+        }
     }
 }

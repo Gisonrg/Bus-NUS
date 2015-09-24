@@ -10,7 +10,7 @@ import UIKit
 
 class AppUtilities: NSObject {
     class func UIColorFromRGB(colorCode: String, alpha: Float = 1.0) -> UIColor{
-        var scanner = NSScanner(string:colorCode)
+        let scanner = NSScanner(string:colorCode)
         var color:UInt32 = 0;
         scanner.scanHexInt(&color)
         
