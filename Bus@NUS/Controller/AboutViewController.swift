@@ -61,6 +61,4 @@ class AboutViewController: UITableViewController, MFMailComposeViewControllerDel
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    
 }

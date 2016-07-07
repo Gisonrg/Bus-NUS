@@ -18,7 +18,7 @@ class BusApiHelper: NSObject {
     
     static let sharedInstance = BusApiHelper()
     
-    private let baseUrl = "http://gisonrg.me/api/nextBus/"
+    private let baseUrl = "https://nextbus.comfortdelgro.com.sg/eventservice.svc/Shuttleservice?busstopname="
     
     private var delegate:BusApiHelperDelegate?
     
@@ -31,21 +31,21 @@ class BusApiHelper: NSObject {
     }
     
     private func getRawDataForStop(stop:BusStop) {
-           Alamofire.request(.GET, baseUrl + stop.id)
+        Alamofire.request(.GET, baseUrl + stop.id)
             .responseJSON { (_, _, result) -> Void in
                 guard result.isSuccess else {
                     NSLog("Fail to load raw data.")
                     self.delegate?.onReceiveBusData([])
                     return
                 }
-                
-                var json = JSON(result.value!)
+                var json = JSON(result.value!)["ShuttleServiceResult"]
                 var busArray = [BusVo]()
                 if json["shuttles"].type == Type.Dictionary {
                     busArray.append(BusVo(name: json["shuttles"]["name"].string!, nextTime: json["shuttles"]["arrivalTime"].string!))
                 } else {
                     let list: Array<JSON> = json["shuttles"].arrayValue
                     for bus in list {
+                        print(bus)
                         busArray.append(BusVo(name: bus["name"].string!, nextTime: bus["arrivalTime"].string!))
                     }
                 }

@@ -1,212 +1,208 @@
 {
-  "locations": [{
-    "buses": ["A1", "D1 (To BIZ2)", "B", "BTC1"],
-    "latitude": 1.2935,
-    "name": "AS7",
-    "id": "AS7",
-    "longitude": 103.7717
-  }, {
-    "buses": ["A1", "BTC1", "D1 (To BIZ2)",
-      "D2 (To UTown)", "A1E"
-    ],
-    "latitude": 1.29327065,
-    "name": "BIZ 2",
-    "id": "BIZ2",
-    "longitude": 103.77528179
-  }, {
-    "buses": ["BTC1"],
-    "latitude": 1.3198730329296,
-    "name": "BTC - Oei Tiong Ham Building",
-    "id": "BUKITTIMAH-BTC2",
-    "longitude": 103.817785565448
-  }, {
-    "buses": ["D1 (To BIZ2)", "A1", "B", "BTC1", "A1E", "P1 (CLB-UT)"],
-    "latitude": 1.29661556,
-    "name": "Central Library",
-    "id": "CENLIB",
-    "longitude": 103.77252342
-  }, {
-    "buses": ["A1", "A2", "B", "D1 (To BIZ2)", "D1 (To UTown)"],
-    "latitude": 1.29434373,
-    "name": "COM2 (CP13)",
-    "id": "COM2",
-    "longitude": 103.77370813
-  }, {
-    "buses": ["A2", "D1 (To UTown)", "B", "A2E(AM)", "A2E(PM)"],
-    "latitude": 1.29715571,
-    "name": "Computer Centre",
-    "id": "COMCEN",
-    "longitude": 103.77271211
-  }, {
-    "buses": ["A2", "D1 (To UTown)"],
-    "latitude": 1.29312892,
-    "name": "Opp HSSML",
-    "id": "HSSML-OPP",
-    "longitude": 103.77479454
-  }, {
-    "buses": ["A1", "D2 (To UTown)", "A1E"],
-    "latitude": 1.294762,
-    "name": "Kent Ridge MRT",
-    "id": "KR-MRT",
-    "longitude": 103.784294
-  }, {
-    "buses": ["A2", "D2 (To CP11)", "A2E(AM)", "A2E(PM)"],
-    "latitude": 1.295054,
-    "name": "Opp Kent Ridge MRT",
-    "id": "KR-MRT-OPP",
-    "longitude": 103.78466
-  }, {
-    "buses": ["A1", "D1 (To BIZ2)", "B", "BTC1"],
-    "latitude": 1.29477503,
-    "name": "LT13",
-    "id": "LT13",
-    "longitude": 103.77061436
-  }, {
-    "buses": ["B", "D1 (To UTown)", "A2", "A2E(AM)", "A2E(PM)"],
-    "latitude": 1.29541598,
-    "name": "Ventus (Opp LT13)",
-    "id": "LT13-OPP",
-    "longitude": 103.77066248
-  }, {
-    "buses": ["A1", "D2 (To UTown)", "C", "A1E", "P2 (FoS-UT)"],
-    "latitude": 1.29745904,
-    "name": "LT29",
-    "id": "LT29",
-    "longitude": 103.78096715
-  }, {
-    "buses": ["A2", "B", "C", "D1 (To BIZ2)", "D2 (To UTown)", "BTC1",
-      "BTC2"
-    ],
-    "latitude": 1.30106227,
-    "name": "Museum",
-    "id": "MUSEUM",
-    "longitude": 103.77364746
-  }, {
-    "buses": ["A1"],
-    "latitude": 1.29310469,
-    "name": "PGP Hse No 7",
-    "id": "PGP7",
-    "longitude": 103.77788918
-  }, {
-    "buses": ["A2"],
-    "latitude": 1.29362639,
-    "name": "PGP Hse No 12",
-    "id": "PGP12",
-    "longitude": 103.77703196
-  }, {
-    "buses": ["A1"],
-    "latitude": 1.29367885,
-    "name": "Opp PGP Hse No 12",
-    "id": "PGP12-OPP",
-    "longitude": 103.77701582
-  }, {
-    "buses": ["A2"],
-    "latitude": 1.29313626,
-    "name": "PGP Hse No 14 & No 15",
-    "id": "PGP14-15",
-    "longitude": 103.77789507
-  }, {
-    "buses": ["A1", "A2", "BTC1", "D2 (To CP11)"],
-    "latitude": 1.29188843,
-    "name": "PGPR",
-    "id": "PGP",
-    "longitude": 103.78037776
-  }, {
-    "buses": ["B", "C"],
-    "latitude": 1.30112574,
-    "name": "Raffles Hall",
-    "id": "RAFFLES",
-    "longitude": 103.77270731
-  }, {
-    "buses": ["A2", "C", "D2 (To CP11)", "A2E(AM)", "A2E(PM)"],
-    "latitude": 1.29750725,
-    "name": "S17",
-    "id": "S17",
-    "longitude": 103.78070309
-  }, {
-    "buses": ["A2", "C", "D2 (To CP11)"],
-    "latitude": 1.29894779,
-    "name": "University Health Centre",
-    "id": "STAFFCLUB",
-    "longitude": 103.77603874
-  }, {
-    "buses": ["A1", "D2 (To UTown)", "C"],
-    "latitude": 1.29874987,
-    "name": "Opp University Health Centre",
-    "id": "STAFFCLUB-OPP",
-    "longitude": 103.77565309
-  }, {
-    "buses": ["A1", "D2 (To UTown)", "C"],
-    "latitude": 1.29710886,
-    "name": "UHall",
-    "id": "UHALL",
-    "longitude": 103.77873696
-  }, {
-    "buses": ["A2", "C", "D2 (To CP11)"],
-    "latitude": 1.29727358,
-    "name": "Opp UHall",
-    "id": "UHALL-OPP",
-    "longitude": 103.77793184
-  }, {
-    "buses": ["D1 (To UTown)", "D2 (To UTown)", "P1 (UT-CLB)", "P2 (UT-FoS)"],
-    "latitude": 1.30361434,
-    "name": "University Town",
-    "id": "UTown",
-    "longitude": 103.77431692
-  }, {
-    "buses": ["A1", "B", "BTC1", "D1 (To BIZ2)"],
-    "latitude": 1.29893975,
-    "name": "YIH",
-    "id": "YIH",
-    "longitude": 103.77432318
-  }, {
-    "buses": ["A2", "B", "D1 (To UTown)", "D1 (To BIZ2)"],
-    "latitude": 1.29887424,
-    "name": "Opp YIH",
-    "id": "YIH-OPP",
-    "longitude": 103.77417707
-  }, {
-    "buses": ["BTC1"],
-    "latitude": 1.3234,
-    "name": "College Green Hostel",
-    "id": "CGH",
-    "longitude": 103.81630277
-  }, {
-    "buses": ["BTC2"],
-    "latitude": 1.3227861111,
-    "name": "Botanic Gardens MRT",
-    "id": "BG-MRT",
-    "longitude": 103.81518611
-  }, {
-    "buses": ["B", "BTC1", "C"],
-    "latitude": 1.3008222222,
-    "name": "The Japanese School",
-    "id": "JAPSCHOOL",
-    "longitude": 103.770027777
-  }, {
-    "buses": ["BTC2", "C"],
-    "latitude": 1.300625,
-    "name": "Opp Block EA",
-    "id": "BLK-EA-OPP",
-    "longitude": 103.770102777
-  }, {
-    "buses": ["B", "BTC1", "C"],
-    "latitude": 1.29449722222,
-    "name": "Kent Ridge Bus Terminal",
-    "id": "KR-BT",
-    "longitude": 103.76981944
-  }, {
-    "buses": ["A2"],
-    "latitude": 1.29337222,
-    "name": "Opp NUSS",
-    "id": "NUSS-OPP",
-    "longitude": 103.772344
-  }, {
-    "buses": ["A1", "A2", "BTC1", "D2 (To UTown)", "A1E"],
-    "latitude": 1.29185277,
-    "name": "Prince George's Park Terminal",
-    "id": "PGPT",
-    "longitude": 103.7804888
-  }],
-  "last_modified" : "2015-08-13 23:30"
+    "locations": [{
+        "buses": ["A1", "D1", "B", "BTC1"],
+        "latitude": 1.2935,
+        "name": "AS7",
+        "id": "AS7",
+        "longitude": 103.7717
+        }, {
+        "buses": ["A1", "BTC1", "D1", "A1E"],
+        "latitude": 1.29327065,
+        "name": "BIZ 2",
+        "id": "BIZ2",
+        "longitude": 103.77528179
+        }, {
+        "buses": ["BTC1"],
+        "latitude": 1.3198730329296,
+        "name": "BTC - Oei Tiong Ham Building",
+        "id": "BUKITTIMAH-BTC2",
+        "longitude": 103.817785565448
+        }, {
+        "buses": ["D1", "A1", "B", "BTC1", "A1E"],
+        "latitude": 1.29661556,
+        "name": "Central Library",
+        "id": "CENLIB",
+        "longitude": 103.77252342
+        }, {
+        "buses": ["A1", "A2", "B", "D1(To BIZ2)", "D1(To UTown)"],
+        "latitude": 1.29434373,
+        "name": "COM2 (CP13)",
+        "id": "COM2",
+        "longitude": 103.77370813
+        }, {
+        "buses": ["A2", "D1", "B", "A2E"],
+        "latitude": 1.29715571,
+        "name": "Computer Centre",
+        "id": "COMCEN",
+        "longitude": 103.77271211
+        }, {
+        "buses": ["A2", "D1"],
+        "latitude": 1.29312892,
+        "name": "Opp HSSML",
+        "id": "HSSML-OPP",
+        "longitude": 103.77479454
+        }, {
+        "buses": ["A1", "D2", "A1E"],
+        "latitude": 1.294762,
+        "name": "Kent Ridge MRT",
+        "id": "KR-MRT",
+        "longitude": 103.784294
+        }, {
+        "buses": ["A2", "D2", "A2E"],
+        "latitude": 1.295054,
+        "name": "Opp Kent Ridge MRT",
+        "id": "KR-MRT-OPP",
+        "longitude": 103.78466
+        }, {
+        "buses": ["A1", "D1", "B", "BTC1"],
+        "latitude": 1.29477503,
+        "name": "LT13",
+        "id": "LT13",
+        "longitude": 103.77061436
+        }, {
+        "buses": ["B", "D1", "A2", "A2E"],
+        "latitude": 1.29541598,
+        "name": "Ventus (Opp LT13)",
+        "id": "LT13-OPP",
+        "longitude": 103.77066248
+        }, {
+        "buses": ["A1", "D2", "C", "A1E"],
+        "latitude": 1.29745904,
+        "name": "LT29",
+        "id": "LT29",
+        "longitude": 103.78096715
+        }, {
+        "buses": ["A2", "B", "C", "D1", "D2", "BTC1", "BTC2"],
+        "latitude": 1.30106227,
+        "name": "Museum",
+        "id": "MUSEUM",
+        "longitude": 103.77364746
+        }, {
+        "buses": ["A1"],
+        "latitude": 1.29310469,
+        "name": "PGP Hse No 7",
+        "id": "PGP7",
+        "longitude": 103.77788918
+        }, {
+        "buses": ["A2"],
+        "latitude": 1.29362639,
+        "name": "PGP Hse No 12",
+        "id": "PGP12",
+        "longitude": 103.77703196
+        }, {
+        "buses": ["A1"],
+        "latitude": 1.29367885,
+        "name": "Opp PGP Hse No 12",
+        "id": "PGP12-OPP",
+        "longitude": 103.77701582
+        }, {
+        "buses": ["A2"],
+        "latitude": 1.29313626,
+        "name": "PGP Hse No 14 & No 15",
+        "id": "PGP14-15",
+        "longitude": 103.77789507
+        }, {
+        "buses": ["D2"],
+        "latitude": 1.29188843,
+        "name": "PGPR",
+        "id": "PGP",
+        "longitude": 103.78037776
+        }, {
+        "buses": ["B", "C"],
+        "latitude": 1.30112574,
+        "name": "Raffles Hall",
+        "id": "RAFFLES",
+        "longitude": 103.77270731
+        }, {
+        "buses": ["A2", "C", "D2", "A2E"],
+        "latitude": 1.29750725,
+        "name": "S17",
+        "id": "S17",
+        "longitude": 103.78070309
+        }, {
+        "buses": ["A2", "C", "D2"],
+        "latitude": 1.29894779,
+        "name": "University Health Centre",
+        "id": "STAFFCLUB",
+        "longitude": 103.77603874
+        }, {
+        "buses": ["A1", "D2", "C"],
+        "latitude": 1.29874987,
+        "name": "Opp University Health Centre",
+        "id": "STAFFCLUB-OPP",
+        "longitude": 103.77565309
+        }, {
+        "buses": ["A1", "D2", "C"],
+        "latitude": 1.29710886,
+        "name": "UHall",
+        "id": "UHALL",
+        "longitude": 103.77873696
+        }, {
+        "buses": ["A2", "C", "D2"],
+        "latitude": 1.29727358,
+        "name": "Opp UHall",
+        "id": "UHALL-OPP",
+        "longitude": 103.77793184
+        }, {
+        "buses": ["D1", "D2"],
+        "latitude": 1.30361434,
+        "name": "University Town",
+        "id": "UTown",
+        "longitude": 103.77431692
+        }, {
+        "buses": ["A1", "B", "BTC1", "D1"],
+        "latitude": 1.29893975,
+        "name": "YIH",
+        "id": "YIH",
+        "longitude": 103.77432318
+        }, {
+        "buses": ["A2", "B", "D1"],
+        "latitude": 1.29887424,
+        "name": "Opp YIH",
+        "id": "YIH-OPP",
+        "longitude": 103.77417707
+        }, {
+        "buses": ["BTC1"],
+        "latitude": 1.3234,
+        "name": "College Green Hostel",
+        "id": "CGH",
+        "longitude": 103.81630277
+        }, {
+        "buses": ["BTC2"],
+        "latitude": 1.3227861111,
+        "name": "Botanic Gardens MRT",
+        "id": "BG-MRT",
+        "longitude": 103.81518611
+        }, {
+        "buses": ["BTC2", "C"],
+        "latitude": 1.300625,
+        "name": "Opp Block EA",
+        "id": "BLK-EA-OPP",
+        "longitude": 103.770102777
+        }, {
+        "buses": ["B", "BTC1", "C"],
+        "latitude": 1.29449722222,
+        "name": "Kent Ridge Bus Terminal",
+        "id": "KR-BT",
+        "longitude": 103.76981944
+        }, {
+        "buses": ["A2", "D1"],
+        "latitude": 1.29337222,
+        "name": "Opp NUSS",
+        "id": "NUSS-OPP",
+        "longitude": 103.772344
+        }, {
+        "buses": ["A1", "A2", "BTC1", "D2", "A1E"],
+        "latitude": 1.29185277,
+        "name": "Prince George's Park Terminal",
+        "id": "PGPT",
+        "longitude": 103.7804888
+        }, {
+        "buses": ["BTC1"],
+        "latitude": 1.3019947,
+        "name": "Kent Vale",
+        "id": "KV",
+        "longitude": 103.7659926
+    }],
+    "last_modified": "2016-07-06 23:30"
 }
