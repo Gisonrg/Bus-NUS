@@ -45,7 +45,6 @@ class BusApiHelper: NSObject {
                 } else {
                     let list: Array<JSON> = json["shuttles"].arrayValue
                     for bus in list {
-                        print(bus)
                         busArray.append(BusVo(name: bus["name"].string!, nextTime: bus["arrivalTime"].string!))
                     }
                 }
